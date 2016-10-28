@@ -775,7 +775,7 @@ function draw_state(lookup_data){
 			state_table.notes("*Not statistically significant at the 90% confidence level")
 		} //end one time use code
 		
-		state_table.truncate(null);
+		state_table.truncate(15);
 		metro_title.text(state.name);
 
 		print_link.attr("href",this.get_data("repo")+"docs/"+state.abbr+".pdf");
