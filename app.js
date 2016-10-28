@@ -775,7 +775,7 @@ function draw_state(lookup_data){
 			state_table.notes("*Not statistically significant at the 90% confidence level")
 		} //end one time use code
 		
-		state_table.truncate(15);
+		state_table.truncate(null);
 		metro_title.text(state.name);
 
 		print_link.attr("href",this.get_data("repo")+"docs/"+state.abbr+".pdf");
@@ -894,7 +894,15 @@ function draw_state(lookup_data){
 			});
 			r.on("mouseleave", function(d,i){
 				linkem(d.full_data.cdid, true);
-			})
+			});
+
+			/*r.selectAll("td").style("page-break-inside", "auto");
+
+			r.filter(function(d,i){
+					return i%15==0;
+				})
+				.selectAll("td")
+				.style("page-break-inside", "avoid");*/
 		});
 		
 		//chart titles
@@ -1104,7 +1112,7 @@ function mainfn(){
 		}
 	});
 
-	//remove for production, in addition to function referance above
+	//remove for production, in addition to function referance above, and truncate(null) --> make truncate(15) in draw-state
 	var phantomPrepped = false;
 	function phantomPrep(){
 		if(!phantomPrepped){
@@ -1114,7 +1122,7 @@ function mainfn(){
 					select_wrap.style("visibility","hidden").style("margin-bottom","20px");
 					d3.select("#print-to-pdf").style("visibility","hidden");
 					d3wrap.append("div").style("position","absolute")
-										 .style("top","20px")
+										 .style("top","0px")
 										 .style("right","10px")
 										 .style("height","50px")
 										 .style("width","320px")

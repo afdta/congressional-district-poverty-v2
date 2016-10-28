@@ -292,7 +292,15 @@ export default function draw_state(lookup_data){
 			});
 			r.on("mouseleave", function(d,i){
 				linkem(d.full_data.cdid, true);
-			})
+			});
+
+			/*r.selectAll("td").style("page-break-inside", "auto");
+
+			r.filter(function(d,i){
+					return i%15==0;
+				})
+				.selectAll("td")
+				.style("page-break-inside", "avoid");*/
 		});
 		
 		//chart titles

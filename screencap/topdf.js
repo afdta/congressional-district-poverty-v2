@@ -8,6 +8,7 @@ var renders = 0;
 function capturePage(st){
 	var page = webPage.create();
 	page.viewportSize = { width: 1300, height: 1200 };
+	page.paperSize = { width: 1320, height: 1550, margin: {top:80, right:10, bottom:270, left:10}};
 	page.settings.userAgent = "PhantomJS.Render.PDF";
 
 	page.onConsoleMessage = function(msg, lineNum, sourceId){

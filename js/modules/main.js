@@ -83,7 +83,7 @@ function mainfn(){
 		}
 	});
 
-	//remove for production, in addition to function referance above
+	//remove for production, in addition to function referance above, and truncate(null) --> make truncate(15) in draw-state
 	var phantomPrepped = false;
 	function phantomPrep(){
 		if(!phantomPrepped){
@@ -93,7 +93,7 @@ function mainfn(){
 					select_wrap.style("visibility","hidden").style("margin-bottom","20px");
 					d3.select("#print-to-pdf").style("visibility","hidden");
 					d3wrap.append("div").style("position","absolute")
-										 .style("top","20px")
+										 .style("top","0px")
 										 .style("right","10px")
 										 .style("height","50px")
 										 .style("width","320px")

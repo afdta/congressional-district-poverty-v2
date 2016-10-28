@@ -116,8 +116,8 @@
 	display:block;
 }
 
-td.sort-asc:before{content:"▲";color:#111111;}
-td.sort-desc:before{content: "▼";color:#111111;}
+td.sort-asc:before{content:"▲";color:#111111;font-size:0.8em;line-height:1em;margin-right:0.1em;}
+td.sort-desc:before{content: "▼";color:#111111;font-size:0.8em;line-height:1em;margin-right:0.1em;}
 
 
 /*clearfix this class*/
